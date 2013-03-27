@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1C1A511D170256F80017982C /* FormularioContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1A511B170256F80017982C /* FormularioContatoViewController.m */; };
 		1C1A511E170256F80017982C /* FormularioContatoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C1A511C170256F80017982C /* FormularioContatoViewController.xib */; };
+		1C1A5121170276FA0017982C /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1A5120170276FA0017982C /* Contato.m */; };
 		1CD992101702556B00FB8AC8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD9920F1702556B00FB8AC8 /* UIKit.framework */; };
 		1CD992121702556B00FB8AC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD992111702556B00FB8AC8 /* Foundation.framework */; };
 		1CD992141702556B00FB8AC8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD992131702556B00FB8AC8 /* CoreGraphics.framework */; };
@@ -24,6 +25,8 @@
 		1C1A511A170256F80017982C /* FormularioContatoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FormularioContatoViewController.h; sourceTree = "<group>"; };
 		1C1A511B170256F80017982C /* FormularioContatoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormularioContatoViewController.m; sourceTree = "<group>"; };
 		1C1A511C170256F80017982C /* FormularioContatoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormularioContatoViewController.xib; sourceTree = "<group>"; };
+		1C1A511F170276FA0017982C /* Contato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contato.h; sourceTree = "<group>"; };
+		1C1A5120170276FA0017982C /* Contato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contato.m; sourceTree = "<group>"; };
 		1CD9920C1702556B00FB8AC8 /* ContatoIP67.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContatoIP67.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD9920F1702556B00FB8AC8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1CD992111702556B00FB8AC8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -87,6 +90,8 @@
 				1CD9921F1702556C00FB8AC8 /* AppDelegate.m */,
 				1C1A511A170256F80017982C /* FormularioContatoViewController.h */,
 				1C1A511B170256F80017982C /* FormularioContatoViewController.m */,
+				1C1A511F170276FA0017982C /* Contato.h */,
+				1C1A5120170276FA0017982C /* Contato.m */,
 				1C1A511C170256F80017982C /* FormularioContatoViewController.xib */,
 				1CD992161702556B00FB8AC8 /* Supporting Files */,
 			);
@@ -176,6 +181,7 @@
 				1CD9921C1702556B00FB8AC8 /* main.m in Sources */,
 				1CD992201702556C00FB8AC8 /* AppDelegate.m in Sources */,
 				1C1A511D170256F80017982C /* FormularioContatoViewController.m in Sources */,
+				1C1A5121170276FA0017982C /* Contato.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

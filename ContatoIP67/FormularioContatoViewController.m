@@ -7,32 +7,64 @@
 //
 
 #import "FormularioContatoViewController.h"
-
-@interface FormularioContatoViewController ()
-
-@end
+#import "Contato.h"
 
 @implementation FormularioContatoViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+
+
+
+- (IBAction)novoContato:(id)sender {
+    
+    Contato *contato = [[Contato alloc]init];
+    
+    contato.nome = _nome.text;
+    contato.telefone = _telefone.text;
+    contato.email = _email.text;
+    contato.endereco = _endereco.text;
+    contato.site = _site.text;
+        
+    NSLog(@"daddos: %@",contato);
+   
+    
+    if ([_nome.text isEqualToString:@""]) {
+        UIAlertView *alert1 = [[UIAlertView alloc] initWithTitle:@"Atenção"
+                                                        message:@"Digite o nome"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert1 show];
+    }else
+    
+    if ([_telefone.text isEqualToString:@""]) {
+        UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:@"Atenção"
+                                                        message:@"Digite o telefone"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert2 show];
     }
-    return self;
+    
+    
+    
+    [self.view endEditing:YES];
+
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+-(IBAction)proximoElemento:(UITextField *)textField{
+    
+    if( textField == self.nome){
+        [self.telefone becomeFirstResponder];
+    }else if( textField == self.telefone){
+        [self.email becomeFirstResponder];
+    }else if( textField == self.email){
+        [self.endereco becomeFirstResponder];
+    }else if( textField == self.endereco){
+        [self.site becomeFirstResponder];
+    }else {
+        [self novoContato:nil];
+    }
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 @end
