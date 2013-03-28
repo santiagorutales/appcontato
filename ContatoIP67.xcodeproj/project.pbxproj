@@ -19,6 +19,7 @@
 		1CD992221702556C00FB8AC8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CD992211702556C00FB8AC8 /* Default.png */; };
 		1CD992241702556C00FB8AC8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CD992231702556C00FB8AC8 /* Default@2x.png */; };
 		1CD992261702556C00FB8AC8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CD992251702556C00FB8AC8 /* Default-568h@2x.png */; };
+		1CFE89481703B68E00E1025E /* ListaContatosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFE89471703B68E00E1025E /* ListaContatosViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		1CD992211702556C00FB8AC8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		1CD992231702556C00FB8AC8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		1CD992251702556C00FB8AC8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1CFE89461703B68E00E1025E /* ListaContatosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListaContatosViewController.h; path = ../ListaContatosViewController.h; sourceTree = "<group>"; };
+		1CFE89471703B68E00E1025E /* ListaContatosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListaContatosViewController.m; path = ../ListaContatosViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,10 +89,13 @@
 		1CD992151702556B00FB8AC8 /* ContatoIP67 */ = {
 			isa = PBXGroup;
 			children = (
+				1CFE89491703CD0000E1025E /* library */,
 				1CD9921E1702556B00FB8AC8 /* AppDelegate.h */,
 				1CD9921F1702556C00FB8AC8 /* AppDelegate.m */,
 				1C1A511A170256F80017982C /* FormularioContatoViewController.h */,
 				1C1A511B170256F80017982C /* FormularioContatoViewController.m */,
+				1CFE89461703B68E00E1025E /* ListaContatosViewController.h */,
+				1CFE89471703B68E00E1025E /* ListaContatosViewController.m */,
 				1C1A511F170276FA0017982C /* Contato.h */,
 				1C1A5120170276FA0017982C /* Contato.m */,
 				1C1A511C170256F80017982C /* FormularioContatoViewController.xib */,
@@ -110,6 +116,13 @@
 				1CD992251702556C00FB8AC8 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1CFE89491703CD0000E1025E /* library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +195,7 @@
 				1CD992201702556C00FB8AC8 /* AppDelegate.m in Sources */,
 				1C1A511D170256F80017982C /* FormularioContatoViewController.m in Sources */,
 				1C1A5121170276FA0017982C /* Contato.m in Sources */,
+				1CFE89481703B68E00E1025E /* ListaContatosViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

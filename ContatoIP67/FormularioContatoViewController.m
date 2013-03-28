@@ -11,7 +11,15 @@
 
 @implementation FormularioContatoViewController
 
-
+-(id)init{
+    
+    self = [super init];
+    
+    if(self){
+        self.contatos = [[NSMutableArray alloc]init];
+    }    
+    return self;     
+}
 
 
 - (IBAction)novoContato:(id)sender {
@@ -23,9 +31,6 @@
     contato.email = _email.text;
     contato.endereco = _endereco.text;
     contato.site = _site.text;
-        
-    NSLog(@"daddos: %@",contato);
-   
     
     if ([_nome.text isEqualToString:@""]) {
         UIAlertView *alert1 = [[UIAlertView alloc] initWithTitle:@"Atenção"
@@ -34,22 +39,32 @@
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
         [alert1 show];
-    }else
     
-    if ([_telefone.text isEqualToString:@""]) {
+    }else if ([_telefone.text isEqualToString:@""]) {
+    
         UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:@"Atenção"
                                                         message:@"Digite o telefone"
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];
         [alert2 show];
+    }else{
+        
+        for(NSString *contatos in self.contatos){
+            
+        }
+        
+        [self.contatos addObject:contato];
+        NSLog(@"contato: %@",self.contatos);
+        
+        
     }
-    
     
     
     [self.view endEditing:YES];
 
 }
+
 
 -(IBAction)proximoElemento:(UITextField *)textField{
     
