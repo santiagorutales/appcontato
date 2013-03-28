@@ -17,10 +17,32 @@
     
     if(self){
         self.contatos = [[NSMutableArray alloc]init];
+        self.navigationItem.title = @"Cadastro";
+        
+        UIBarButtonItem *cancela = [[UIBarButtonItem alloc] initWithTitle:@"Cancela"
+                                                                    style:UIBarButtonItemStylePlain
+                                                                   target:self
+                                                                   action:@selector(escondeFormulario)];
+        self.navigationItem.leftBarButtonItem = cancela;
+        
+        UIBarButtonItem *adiciona = [[UIBarButtonItem alloc] initWithTitle:@"Adiciona"
+                                                                     style:UIBarButtonItemStylePlain
+                                                                    target:self
+                                                                    action:@selector(criaContato)];
+        self.navigationItem.rightBarButtonItem = adiciona;
+        
     }    
     return self;     
 }
 
+-(void)escondeFormulario{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)criaContato{
+    Contato *contato = [[Contato alloc]init];
+    [self.contatos addObject:contato];
+}
 
 - (IBAction)novoContato:(id)sender {
     

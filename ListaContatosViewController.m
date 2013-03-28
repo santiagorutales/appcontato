@@ -31,6 +31,10 @@
 
     FormularioContatoViewController  *form = [[FormularioContatoViewController alloc]init];
     
-    [self presentViewController:form animated:YES completion:nil];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:form];
+    
+    [self presentViewController:nav animated:YES completion:nil];
+     
 }
+
 @end
