@@ -16,8 +16,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *endereco;
 @property (weak, nonatomic) IBOutlet UITextField *site;
 
-@property(strong) NSMutableArray *contatos;
+@property (strong) NSMutableArray *contatos;
 
-- (IBAction)novoContato:(id)sender;
+
 
 @end

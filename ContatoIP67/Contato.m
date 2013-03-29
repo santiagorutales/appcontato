@@ -10,86 +10,35 @@
 
 @implementation Contato
 
+-(void)encodeWithCoder:(NSCoder *)aCoder {
+    
+    [aCoder encodeObject:_nome forKey:@"nome"];
+    [aCoder encodeObject:_telefone forKey:@"telefone"];
+    [aCoder encodeObject:_email forKey:@"email"];
+    [aCoder encodeObject:_endereco forKey:@"endereco"];
+    [aCoder encodeObject:_site forKey:@"site"];
+    
+}
 
+-(id)initWithCoder:(NSCoder *)aDecoder{
+    self = [super init];
+    
+    if(self){
+        [self setNome:[aDecoder decodeObjectForKey:@"nome"]];
+        [self setTelefone:[aDecoder decodeObjectForKey:@"telefone"]];
+        [self setEmail:[aDecoder decodeObjectForKey:@"email"]];
+        [self setEndereco:[aDecoder decodeObjectForKey:@"endereco"]];
+        [self setSite:[aDecoder decodeObjectForKey:@"site"]];
+    }
+    return self;
+
+}
 
 -(NSString *)description{
     
     return [NSString stringWithFormat:@"%@<%@>",_nome,_email];
 }
 
-
-
-
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
-    
-    int length = [self getLength:textField.text];
-    //NSLog(@"Length  =  %d ",length);
-    
-    if(length == 10)
-    {
-        if(range.length == 0)
-            return NO;
-    }
-    
-    if(length == 3)
-    {
-        NSString *num = [self formatNumber:textField.text];
-        textField.text = [NSString stringWithFormat:@"(%@) ",num];
-        if(range.length > 0)
-            textField.text = [NSString stringWithFormat:@"%@",[num substringToIndex:3]];
-    }
-    else if(length == 6)
-    {
-        NSString *num = [self formatNumber:textField.text];
-        //NSLog(@"%@",[num  substringToIndex:3]);
-        //NSLog(@"%@",[num substringFromIndex:3]);
-        textField.text = [NSString stringWithFormat:@"(%@) %@-",[num  substringToIndex:3],[num substringFromIndex:3]];
-        if(range.length > 0)
-            textField.text = [NSString stringWithFormat:@"(%@) %@",[num substringToIndex:3],[num substringFromIndex:3]];
-    }
-    
-    return YES;
-}
-
--(NSString*)formatNumber:(NSString*)mobileNumber
-{
-    
-    mobileNumber = [mobileNumber stringByReplacingOccurrencesOfString:@"(" withString:@""];
-    mobileNumber = [mobileNumber stringByReplacingOccurrencesOfString:@")" withString:@""];
-    mobileNumber = [mobileNumber stringByReplacingOccurrencesOfString:@" " withString:@""];
-    mobileNumber = [mobileNumber stringByReplacingOccurrencesOfString:@"-" withString:@""];
-    mobileNumber = [mobileNumber stringByReplacingOccurrencesOfString:@"+" withString:@""];
-    
-    NSLog(@"%@", mobileNumber);
-    
-    int length = [mobileNumber length];
-    if(length > 10)
-    {
-        mobileNumber = [mobileNumber substringFromIndex: length-10];
-        NSLog(@"%@", mobileNumber);
-        
-    }
-    
-    
-    return mobileNumber;
-}
-
-
--(int)getLength:(NSString*)mobileNumber
-{
-    
-    mobileNumber = [mobileNumber stringByReplacingOccurrencesOfString:@"(" withString:@""];
-    mobileNumber = [mobileNumber stringByReplacingOccurrencesOfString:@")" withString:@""];
-    mobileNumber = [mobileNumber stringByReplacingOccurrencesOfString:@" " withString:@""];
-    mobileNumber = [mobileNumber stringByReplacingOccurrencesOfString:@"-" withString:@""];
-    mobileNumber = [mobileNumber stringByReplacingOccurrencesOfString:@"+" withString:@""];
-    
-    int length = [mobileNumber length];
-    
-    return length;
-    
-    
-}
 
 
 

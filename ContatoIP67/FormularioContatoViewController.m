@@ -16,7 +16,6 @@
     self = [super init];
     
     if(self){
-        self.contatos = [[NSMutableArray alloc]init];
         self.navigationItem.title = @"Cadastro";
         
         UIBarButtonItem *cancela = [[UIBarButtonItem alloc] initWithTitle:@"Cancela"
@@ -40,35 +39,24 @@
 }
 
 -(void)criaContato{
-    Contato *contato = [[Contato alloc]init];
-    [self.contatos addObject:contato];
-}
-
-- (IBAction)novoContato:(id)sender {
+    Contato *contato = [self pegaDadosDoFormulario];
     
-    Contato *contato = [[Contato alloc]init];
-    
-    contato.nome = _nome.text;
-    contato.telefone = _telefone.text;
-    contato.email = _email.text;
-    contato.endereco = _endereco.text;
-    contato.site = _site.text;
     
     if ([_nome.text isEqualToString:@""]) {
         UIAlertView *alert1 = [[UIAlertView alloc] initWithTitle:@"Atenção"
-                                                        message:@"Digite o nome"
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
+                                                         message:@"Digite o nome"
+                                                        delegate:nil
+                                               cancelButtonTitle:@"OK"
+                                               otherButtonTitles:nil];
         [alert1 show];
-    
+        
     }else if ([_telefone.text isEqualToString:@""]) {
-    
+        
         UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:@"Atenção"
-                                                        message:@"Digite o telefone"
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
+                                                         message:@"Digite o telefone"
+                                                        delegate:nil
+                                               cancelButtonTitle:@"OK"
+                                               otherButtonTitles:nil];
         [alert2 show];
     }else{
         
@@ -76,16 +64,73 @@
             
         }
         
+         
         [self.contatos addObject:contato];
-        NSLog(@"contato: %@",self.contatos);
-        
+        NSLog(@"cpontato:%d",[self.contatos count]);
+        [self dismissViewControllerAnimated:YES completion:nil];
+        [self.view endEditing:YES];
         
     }
     
-    
-    [self.view endEditing:YES];
 
 }
+
+-(Contato *)pegaDadosDoFormulario{
+    
+        Contato *contato = [[Contato alloc]init];
+    
+        contato.nome = _nome.text;
+        contato.telefone = _telefone.text;
+        contato.email = _email.text;
+        contato.endereco = _endereco.text;
+        contato.site = _site.text;
+    
+    return contato;
+}
+
+
+//- (IBAction)novoContato:(id)sender {
+//    
+//    Contato *contato = [[Contato alloc]init];
+//    
+//    contato.nome = _nome.text;
+//    contato.telefone = _telefone.text;
+//    contato.email = _email.text;
+//    contato.endereco = _endereco.text;
+//    contato.site = _site.text;
+//    
+//    if ([_nome.text isEqualToString:@""]) {
+//        UIAlertView *alert1 = [[UIAlertView alloc] initWithTitle:@"Atenção"
+//                                                        message:@"Digite o nome"
+//                                                       delegate:nil
+//                                              cancelButtonTitle:@"OK"
+//                                              otherButtonTitles:nil];
+//        [alert1 show];
+//    
+//    }else if ([_telefone.text isEqualToString:@""]) {
+//    
+//        UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:@"Atenção"
+//                                                        message:@"Digite o telefone"
+//                                                       delegate:nil
+//                                              cancelButtonTitle:@"OK"
+//                                              otherButtonTitles:nil];
+//        [alert2 show];
+//    }else{
+//        
+//        for(NSString *contatos in self.contatos){
+//            
+//        }
+//        
+//        [self.contatos addObject:contato];
+//        NSLog(@"contato: %@",self.contatos);
+//        
+//        
+//    }
+//    
+//    
+//    [self.view endEditing:YES];
+//
+//}
 
 
 -(IBAction)proximoElemento:(UITextField *)textField{
@@ -99,7 +144,7 @@
     }else if( textField == self.endereco){
         [self.site becomeFirstResponder];
     }else {
-        [self novoContato:nil];
+        //[self novoContato:nil];
     }
 }
 

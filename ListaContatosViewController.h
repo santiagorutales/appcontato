@@ -9,5 +9,9 @@
 #import <Foundation/Foundation.h>
 
 @interface ListaContatosViewController : UITableViewController
+{
+    NSMutableArray *_contatos;
+}
+- (void) setContatos: (NSMutableArray *) contatos;
 
 @end

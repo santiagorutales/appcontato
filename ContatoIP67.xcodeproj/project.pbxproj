@@ -10,6 +10,7 @@
 		1C1A511D170256F80017982C /* FormularioContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1A511B170256F80017982C /* FormularioContatoViewController.m */; };
 		1C1A511E170256F80017982C /* FormularioContatoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C1A511C170256F80017982C /* FormularioContatoViewController.xib */; };
 		1C1A5121170276FA0017982C /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1A5120170276FA0017982C /* Contato.m */; };
+		1C9C9E1017051A03006BEFCE /* ListaContatosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFE89471703B68E00E1025E /* ListaContatosViewController.m */; };
 		1CD992101702556B00FB8AC8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD9920F1702556B00FB8AC8 /* UIKit.framework */; };
 		1CD992121702556B00FB8AC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD992111702556B00FB8AC8 /* Foundation.framework */; };
 		1CD992141702556B00FB8AC8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD992131702556B00FB8AC8 /* CoreGraphics.framework */; };
@@ -19,7 +20,6 @@
 		1CD992221702556C00FB8AC8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CD992211702556C00FB8AC8 /* Default.png */; };
 		1CD992241702556C00FB8AC8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CD992231702556C00FB8AC8 /* Default@2x.png */; };
 		1CD992261702556C00FB8AC8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CD992251702556C00FB8AC8 /* Default-568h@2x.png */; };
-		1CFE89481703B68E00E1025E /* ListaContatosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFE89471703B68E00E1025E /* ListaContatosViewController.m */; };
 		1CFE894B1703CF9D00E1025E /* README in Resources */ = {isa = PBXBuildFile; fileRef = 1CFE894A1703CF9D00E1025E /* README */; };
 /* End PBXBuildFile section */
 
@@ -94,13 +94,13 @@
 				1CFE89491703CD0000E1025E /* library */,
 				1CD9921E1702556B00FB8AC8 /* AppDelegate.h */,
 				1CD9921F1702556C00FB8AC8 /* AppDelegate.m */,
+				1C1A511C170256F80017982C /* FormularioContatoViewController.xib */,
 				1C1A511A170256F80017982C /* FormularioContatoViewController.h */,
 				1C1A511B170256F80017982C /* FormularioContatoViewController.m */,
 				1CFE89461703B68E00E1025E /* ListaContatosViewController.h */,
 				1CFE89471703B68E00E1025E /* ListaContatosViewController.m */,
 				1C1A511F170276FA0017982C /* Contato.h */,
 				1C1A5120170276FA0017982C /* Contato.m */,
-				1C1A511C170256F80017982C /* FormularioContatoViewController.xib */,
 				1CD992161702556B00FB8AC8 /* Supporting Files */,
 			);
 			path = ContatoIP67;
@@ -195,11 +195,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C9C9E1017051A03006BEFCE /* ListaContatosViewController.m in Sources */,
 				1CD9921C1702556B00FB8AC8 /* main.m in Sources */,
 				1CD992201702556C00FB8AC8 /* AppDelegate.m in Sources */,
 				1C1A511D170256F80017982C /* FormularioContatoViewController.m in Sources */,
 				1C1A5121170276FA0017982C /* Contato.m in Sources */,
-				1CFE89481703B68E00E1025E /* ListaContatosViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
