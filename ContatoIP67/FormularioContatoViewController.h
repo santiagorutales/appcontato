@@ -7,8 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Contato.h"
+#import "ListaContatosProtocol.h"
+
 
 @interface FormularioContatoViewController : UIViewController
+
+@property(weak) id<ListaContatosProtocol> delegate;
 
 @property (weak, nonatomic) IBOutlet UITextField *nome;
 @property (weak, nonatomic) IBOutlet UITextField *telefone;
@@ -18,6 +23,8 @@
 
 @property (strong) NSMutableArray *contatos;
 
+@property(strong) Contato *contato;
 
+-(id)initWithContato:(Contato *) contato;
 
 @end

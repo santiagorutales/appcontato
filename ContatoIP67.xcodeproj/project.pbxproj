@@ -42,6 +42,7 @@
 		1CD992211702556C00FB8AC8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		1CD992231702556C00FB8AC8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		1CD992251702556C00FB8AC8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1CEA0501170675310055FB15 /* ListaContatosProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ListaContatosProtocol.h; path = ../ListaContatosProtocol.h; sourceTree = "<group>"; };
 		1CFE89461703B68E00E1025E /* ListaContatosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListaContatosViewController.h; path = ../ListaContatosViewController.h; sourceTree = "<group>"; };
 		1CFE89471703B68E00E1025E /* ListaContatosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListaContatosViewController.m; path = ../ListaContatosViewController.m; sourceTree = "<group>"; };
 		1CFE894A1703CF9D00E1025E /* README */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
@@ -98,6 +99,7 @@
 				1C1A511A170256F80017982C /* FormularioContatoViewController.h */,
 				1C1A511B170256F80017982C /* FormularioContatoViewController.m */,
 				1CFE89461703B68E00E1025E /* ListaContatosViewController.h */,
+				1CEA0501170675310055FB15 /* ListaContatosProtocol.h */,
 				1CFE89471703B68E00E1025E /* ListaContatosViewController.m */,
 				1C1A511F170276FA0017982C /* Contato.h */,
 				1C1A5120170276FA0017982C /* Contato.m */,
@@ -110,12 +112,12 @@
 			isa = PBXGroup;
 			children = (
 				1CD992171702556B00FB8AC8 /* ContatoIP67-Info.plist */,
-				1CD992181702556B00FB8AC8 /* InfoPlist.strings */,
-				1CD9921B1702556B00FB8AC8 /* main.m */,
 				1CD9921D1702556B00FB8AC8 /* ContatoIP67-Prefix.pch */,
+				1CD992251702556C00FB8AC8 /* Default-568h@2x.png */,
 				1CD992211702556C00FB8AC8 /* Default.png */,
 				1CD992231702556C00FB8AC8 /* Default@2x.png */,
-				1CD992251702556C00FB8AC8 /* Default-568h@2x.png */,
+				1CD992181702556B00FB8AC8 /* InfoPlist.strings */,
+				1CD9921B1702556B00FB8AC8 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";

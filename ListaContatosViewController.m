@@ -26,8 +26,33 @@
                                                                                                action:@selector(exibeFormulario)];
         
         self.navigationItem.rightBarButtonItem = botaoExibirFormulario;
+        self.navigationItem.leftBarButtonItem = self.editButtonItem;
     }
     return self;
+}
+
+-(void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(editingStyle == UITableViewCellEditingStyleDelete){
+        [self.contatos removeObjectAtIndex:indexPath.row];
+        NSArray *indexPaths = [NSArray arrayWithObject:indexPath];
+        [tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    Contato *contato = [self.contatos objectAtIndex:indexPath.row];
+    
+    FormularioContatoViewController *form = [[FormularioContatoViewController alloc] initWithContato:contato];
+    
+    form.delegate = self;
+    form.contatos = self.contatos;
+    
+    
+    [self.navigationController pushViewController:form animated:YES];
+    
+    NSLog(@"nome: %@", contato.nome);
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -59,17 +84,30 @@
 }
 
 -(void)exibeFormulario{
-
+    
+    [self setEditing:NO animated:YES];
+    
     FormularioContatoViewController  *form = [[FormularioContatoViewController alloc]init];
     
     form.contatos = self.contatos;
-    
+    form.delegate = self;
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:form];
     
     [self presentViewController:nav animated:YES completion:nil];
      
 }
+
+
+-(void)contatoAtualizado:(Contato *)contato{
+    NSLog(@"atualizado: %d",[self.contatos indexOfObject:contato]);
+};
+
+-(void)contatoAdicionado:(Contato *)contato{
+    NSLog(@"adicionado: %d",[self.contatos indexOfObject:contato]);
+};
+
+
 - (void) setContatos: (NSMutableArray *) contatos {
     _contatos = contatos;
 }

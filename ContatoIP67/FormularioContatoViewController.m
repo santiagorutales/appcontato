@@ -34,13 +34,49 @@
     return self;     
 }
 
+-(void)atualizaContato{
+    Contato *contatoAtualiado = [self pegaDadosDoFormulario];
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
+    if(self.delegate){
+        [self.delegate contatoAtualizado:contatoAtualiado];
+    }
+}
+
+
+-(id)initWithContato:(Contato *)contato{
+    self = [super init];
+    if(self){
+        self.contato = contato;
+        
+        UIBarButtonItem *confirmar = [[UIBarButtonItem alloc] initWithTitle:@"Confirmar"
+                                                                      style:UIBarButtonItemStylePlain
+                                                                     target:self
+                                                                     action:@selector(atualizaContato)];
+        self.navigationItem.rightBarButtonItem = confirmar;
+    }
+    return self;
+}
+
+
+-(void)viewDidLoad{
+    
+    if(self.contato){
+        self.nome.text = self.contato.nome;
+        self.endereco.text = self.contato.endereco;
+        self.email.text = self.contato.email;
+        self.site.text = self.contato.site;
+        self.telefone.text = self.contato.telefone;
+    }
+    
+}
 -(void)escondeFormulario{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)criaContato{
-    Contato *contato = [self pegaDadosDoFormulario];
-    
+
     
     if ([_nome.text isEqualToString:@""]) {
         UIAlertView *alert1 = [[UIAlertView alloc] initWithTitle:@"Atenção"
@@ -60,15 +96,19 @@
         [alert2 show];
     }else{
         
-        for(NSString *contatos in self.contatos){
-            
-        }
-        
+        Contato *novoContato = [self pegaDadosDoFormulario];
          
-        [self.contatos addObject:contato];
+        [self.contatos addObject:novoContato];
+        
         NSLog(@"cpontato:%d",[self.contatos count]);
+        
         [self dismissViewControllerAnimated:YES completion:nil];
+        
         [self.view endEditing:YES];
+        
+        if(self.delegate){
+            [self.delegate contatoAdicionado:novoContato];
+        }
         
     }
     
@@ -77,60 +117,18 @@
 
 -(Contato *)pegaDadosDoFormulario{
     
-        Contato *contato = [[Contato alloc]init];
+    if(!self.contato){
+        self.contato = [[Contato alloc]init];
+    }
+    self.contato.nome = _nome.text;
+    self.contato.telefone = _telefone.text;
+    self.contato.email = _email.text;
+    self.contato.endereco = _endereco.text;
+    self.contato.site = _site.text;
     
-        contato.nome = _nome.text;
-        contato.telefone = _telefone.text;
-        contato.email = _email.text;
-        contato.endereco = _endereco.text;
-        contato.site = _site.text;
-    
-    return contato;
+    return self.contato;
 }
 
-
-//- (IBAction)novoContato:(id)sender {
-//    
-//    Contato *contato = [[Contato alloc]init];
-//    
-//    contato.nome = _nome.text;
-//    contato.telefone = _telefone.text;
-//    contato.email = _email.text;
-//    contato.endereco = _endereco.text;
-//    contato.site = _site.text;
-//    
-//    if ([_nome.text isEqualToString:@""]) {
-//        UIAlertView *alert1 = [[UIAlertView alloc] initWithTitle:@"Atenção"
-//                                                        message:@"Digite o nome"
-//                                                       delegate:nil
-//                                              cancelButtonTitle:@"OK"
-//                                              otherButtonTitles:nil];
-//        [alert1 show];
-//    
-//    }else if ([_telefone.text isEqualToString:@""]) {
-//    
-//        UIAlertView *alert2 = [[UIAlertView alloc] initWithTitle:@"Atenção"
-//                                                        message:@"Digite o telefone"
-//                                                       delegate:nil
-//                                              cancelButtonTitle:@"OK"
-//                                              otherButtonTitles:nil];
-//        [alert2 show];
-//    }else{
-//        
-//        for(NSString *contatos in self.contatos){
-//            
-//        }
-//        
-//        [self.contatos addObject:contato];
-//        NSLog(@"contato: %@",self.contatos);
-//        
-//        
-//    }
-//    
-//    
-//    [self.view endEditing:YES];
-//
-//}
 
 
 -(IBAction)proximoElemento:(UITextField *)textField{
