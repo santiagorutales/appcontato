@@ -17,6 +17,7 @@
     [aCoder encodeObject:_email forKey:@"email"];
     [aCoder encodeObject:_endereco forKey:@"endereco"];
     [aCoder encodeObject:_site forKey:@"site"];
+    [aCoder encodeObject:_foto forKey:@"foto"];
     
 }
 
@@ -29,6 +30,7 @@
         [self setEmail:[aDecoder decodeObjectForKey:@"email"]];
         [self setEndereco:[aDecoder decodeObjectForKey:@"endereco"]];
         [self setSite:[aDecoder decodeObjectForKey:@"site"]];
+        [self setFoto:[aDecoder decodeObjectForKey:@"foto"]];
     }
     return self;
 

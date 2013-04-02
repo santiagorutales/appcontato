@@ -11,7 +11,7 @@
 #import "ListaContatosProtocol.h"
 
 
-@interface FormularioContatoViewController : UIViewController
+@interface FormularioContatoViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
 
 @property(weak) id<ListaContatosProtocol> delegate;
 
@@ -25,6 +25,11 @@
 
 @property(strong) Contato *contato;
 
+-(IBAction)selecionaFoto:(id)sender;
 -(id)initWithContato:(Contato *) contato;
+
+
+@property (weak, nonatomic) IBOutlet UIButton *botaoFoto;
+
 
 @end

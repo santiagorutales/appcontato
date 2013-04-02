@@ -22,6 +22,7 @@
     
     NSArray *userDirs = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentDir = [userDirs objectAtIndex:0];
+    
     self.arquivoContatos = [NSString stringWithFormat:@"%@/ArquivoContatos",documentDir];
     
     self.contatos = [NSKeyedUnarchiver unarchiveObjectWithFile:self.arquivoContatos];

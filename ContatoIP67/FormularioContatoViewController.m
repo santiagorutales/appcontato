@@ -11,6 +11,9 @@
 
 @implementation FormularioContatoViewController
 
+@synthesize botaoFoto;
+
+
 -(id)init{
     
     self = [super init];
@@ -45,6 +48,24 @@
 }
 
 
+-(IBAction)selecionaFoto:(id)sender{
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+        
+    }else{
+        UIImagePickerController *picker = [[UIImagePickerController alloc]init];
+        picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        picker.allowsEditing = YES;
+        picker.delegate = self;
+        [self presentViewController:picker animated:YES completion:nil];
+    }
+}
+
+-(void) imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
+    UIImage *imagemSelecionada = [info valueForKey:UIImagePickerControllerEditedImage];
+    [botaoFoto setImage:imagemSelecionada forState:UIControlStateNormal];
+    [picker dismissViewControllerAnimated:YES completion:nil];
+}
+
 -(id)initWithContato:(Contato *)contato{
     self = [super init];
     if(self){
@@ -68,6 +89,10 @@
         self.email.text = self.contato.email;
         self.site.text = self.contato.site;
         self.telefone.text = self.contato.telefone;
+        
+        if(self.contato.foto){
+            [botaoFoto setImage:self.contato.foto forState:UIControlStateNormal];
+        }
     }
     
 }
@@ -125,6 +150,10 @@
     self.contato.email = _email.text;
     self.contato.endereco = _endereco.text;
     self.contato.site = _site.text;
+    
+    if(botaoFoto.imageView.image){
+        self.contato.foto = botaoFoto.imageView.image;
+    }
     
     return self.contato;
 }
