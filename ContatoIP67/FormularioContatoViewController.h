@@ -11,7 +11,7 @@
 #import "ListaContatosProtocol.h"
 
 
-@interface FormularioContatoViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate>
+@interface FormularioContatoViewController : UIViewController<UINavigationControllerDelegate,UIImagePickerControllerDelegate,UIActionSheetDelegate>
 
 @property(weak) id<ListaContatosProtocol> delegate;
 
@@ -20,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *email;
 @property (weak, nonatomic) IBOutlet UITextField *endereco;
 @property (weak, nonatomic) IBOutlet UITextField *site;
+@property (weak, nonatomic) IBOutlet UITextField *twitter;
+
 
 @property (strong) NSMutableArray *contatos;
 

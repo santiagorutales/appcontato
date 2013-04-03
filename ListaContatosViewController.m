@@ -9,7 +9,7 @@
 #import "ListaContatosViewController.h"
 #import "FormularioContatoViewController.h"
 #import "Contato.h"
-
+#import <Social/Social.h>
 
 @implementation ListaContatosViewController
 
@@ -17,6 +17,12 @@
     self = [super init];
     
     if (self){
+        
+        UIImage *imageTabItem = [UIImage imageNamed:@"lista-contatos.png"];
+
+        UITabBarItem *tabItem = [[UITabBarItem alloc] initWithTitle:@"Contatos" image:imageTabItem tag:0];
+        
+        self.tabBarItem = tabItem;
         
         self.contatos = [[NSMutableArray alloc]init];
         
@@ -27,6 +33,8 @@
         
         self.navigationItem.rightBarButtonItem = botaoExibirFormulario;
         self.navigationItem.leftBarButtonItem = self.editButtonItem;
+        
+        
     }
     return self;
 }
@@ -52,9 +60,9 @@
                                                             delegate:self
                                                    cancelButtonTitle:@"Cancelar"
                                               destructiveButtonTitle:nil
-                                                   otherButtonTitles:@"Ligar",@"Enviar Email",@"Visualizar Site",@"Abrir Mapa", nil];
+                                                   otherButtonTitles:@"Ligar",@"Enviar Email",@"Visualizar Site",@"Abrir Mapa",@"Twittar", nil];
         
-        [opcoes showInView:self.view];
+        [opcoes showFromTabBar:self.tabBarController.tabBar];
     }
 }
 
@@ -76,6 +84,10 @@
             
         case 3:
             [self mostraMapa];
+            break;
+            
+        case 4:
+            [self enviaTwitter];
             break;
             
         default:
@@ -104,7 +116,15 @@
     }
     
 }
+-(void)enviaTwitter{
+    
+    SLComposeViewController *envia=[SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    [envia setInitialText:[NSString stringWithFormat:@"#ip67caelum @dchohfi @%@",contatoSelecionado.twitter]];
+    [self presentViewController:envia animated:YES completion:nil];
+    
 
+    
+}
 -(void)abrirSite{
     NSString *url = contatoSelecionado.site;
     [self abrirAplicativoComURL:url];
@@ -142,6 +162,7 @@
 }
 -(void) tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    
     if(editingStyle == UITableViewCellEditingStyleDelete){
         [self.contatos removeObjectAtIndex:indexPath.row];
         NSArray *indexPaths = [NSArray arrayWithObject:indexPath];
@@ -149,6 +170,23 @@
         [tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationFade];
     }
 }
+
+
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath
+      toIndexPath:(NSIndexPath *)toIndexPath {
+    
+    Contato *contato = [self.contatos objectAtIndex:fromIndexPath.row];
+    
+    [self.contatos removeObject:contato];
+    [self.contatos insertObject:contato atIndex:toIndexPath.row];
+   
+}
+
+
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     

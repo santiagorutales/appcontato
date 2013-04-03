@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "FormularioContatoViewController.h"
 #import "ListaContatosViewController.h"
-
+#import "ContatosNoMapaViewController.h"
 
 
 @implementation AppDelegate
@@ -36,11 +36,16 @@
 
     UINavigationController *nav = [[UINavigationController alloc]
                                    initWithRootViewController:lista];
+
+    ContatosNoMapaViewController *contatosMapa = [[ContatosNoMapaViewController alloc]init];
     
-    self.window.rootViewController = nav;
+    UINavigationController *mapaNavigation = [[UINavigationController alloc]initWithRootViewController:contatosMapa];
     
+    UITabBarController *tabBarController = [[UITabBarController alloc]init];
+
+    tabBarController.viewControllers = @[nav, mapaNavigation];
     
-    
+    self.window.rootViewController = tabBarController;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

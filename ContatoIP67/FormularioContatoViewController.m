@@ -9,6 +9,7 @@
 #import "FormularioContatoViewController.h"
 #import "Contato.h"
 
+
 @implementation FormularioContatoViewController
 
 @synthesize botaoFoto;
@@ -47,9 +48,37 @@
     }
 }
 
+-(void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex{
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    
+    switch (buttonIndex) {
+        
+        case 0:
+            picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+            break;
+            
+        case 1 :
+            picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            break;
+            
+        default:
+            break;
+    }
+    [self presentViewController:picker animated:YES completion:nil];
+}
+
 
 -(IBAction)selecionaFoto:(id)sender{
     if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]){
+        
+        UIActionSheet *sheet = [[UIActionSheet alloc] initWithTitle:@"Escolha a foto do contato"
+                                                                                     delegate:self
+                                                                            cancelButtonTitle:@"Cancelar"
+                                                                       destructiveButtonTitle:@"Tirar Foto"
+                                                                            otherButtonTitles:@"Escolher da Bilioteca", nil];
+        [sheet showInView:self.view];
         
     }else{
         UIImagePickerController *picker = [[UIImagePickerController alloc]init];
@@ -88,6 +117,7 @@
         self.endereco.text = self.contato.endereco;
         self.email.text = self.contato.email;
         self.site.text = self.contato.site;
+        self.twitter.text = self.contato.twitter;
         self.telefone.text = self.contato.telefone;
         
         if(self.contato.foto){
@@ -150,6 +180,7 @@
     self.contato.email = _email.text;
     self.contato.endereco = _endereco.text;
     self.contato.site = _site.text;
+    self.contato.twitter = _twitter.text;
     
     if(botaoFoto.imageView.image){
         self.contato.foto = botaoFoto.imageView.image;
@@ -170,6 +201,8 @@
         [self.endereco becomeFirstResponder];
     }else if( textField == self.endereco){
         [self.site becomeFirstResponder];
+    }else if( textField == self.site){
+        [self.twitter becomeFirstResponder];
     }else {
         //[self novoContato:nil];
     }

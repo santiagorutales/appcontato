@@ -11,6 +11,19 @@
 		1C1A511E170256F80017982C /* FormularioContatoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C1A511C170256F80017982C /* FormularioContatoViewController.xib */; };
 		1C1A5121170276FA0017982C /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1A5120170276FA0017982C /* Contato.m */; };
 		1C9C9E1017051A03006BEFCE /* ListaContatosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFE89471703B68E00E1025E /* ListaContatosViewController.m */; };
+		1CB22478170B900000551748 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB22477170B8FFF00551748 /* Social.framework */; };
+		1CB2247A170B99F000551748 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB22479170B99F000551748 /* MapKit.framework */; };
+		1CB22486170B9B0200551748 /* ContatosNoMapaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB22484170B9B0200551748 /* ContatosNoMapaViewController.m */; };
+		1CB22487170B9B0200551748 /* ContatosNoMapaViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CB22485170B9B0200551748 /* ContatosNoMapaViewController.xib */; };
+		1CB22492170B9C8300551748 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CB22489170B9C8300551748 /* Default.png */; };
+		1CB22493170B9C8300551748 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CB2248A170B9C8300551748 /* Default@2x.png */; };
+		1CB22494170B9C8300551748 /* gps.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CB2248B170B9C8300551748 /* gps.png */; };
+		1CB22495170B9C8300551748 /* gps@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CB2248C170B9C8300551748 /* gps@2x.png */; };
+		1CB22496170B9C8300551748 /* lista-contatos.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CB2248D170B9C8300551748 /* lista-contatos.png */; };
+		1CB22497170B9C8300551748 /* lista-contatos@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CB2248E170B9C8300551748 /* lista-contatos@2x.png */; };
+		1CB22498170B9C8300551748 /* mapa-contatos.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CB2248F170B9C8300551748 /* mapa-contatos.png */; };
+		1CB22499170B9C8300551748 /* mapa-contatos@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CB22490170B9C8300551748 /* mapa-contatos@2x.png */; };
+		1CB2249A170B9C8300551748 /* Vila Mariana.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 1CB22491170B9C8300551748 /* Vila Mariana.gpx */; };
 		1CB85B53170A4E9B009A0627 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB85B52170A4E9B009A0627 /* MessageUI.framework */; };
 		1CD992101702556B00FB8AC8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD9920F1702556B00FB8AC8 /* UIKit.framework */; };
 		1CD992121702556B00FB8AC8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CD992111702556B00FB8AC8 /* Foundation.framework */; };
@@ -30,6 +43,20 @@
 		1C1A511C170256F80017982C /* FormularioContatoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormularioContatoViewController.xib; sourceTree = "<group>"; };
 		1C1A511F170276FA0017982C /* Contato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contato.h; sourceTree = "<group>"; };
 		1C1A5120170276FA0017982C /* Contato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contato.m; sourceTree = "<group>"; };
+		1CB22477170B8FFF00551748 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		1CB22479170B99F000551748 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		1CB22483170B9B0200551748 /* ContatosNoMapaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContatosNoMapaViewController.h; sourceTree = "<group>"; };
+		1CB22484170B9B0200551748 /* ContatosNoMapaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContatosNoMapaViewController.m; sourceTree = "<group>"; };
+		1CB22485170B9B0200551748 /* ContatosNoMapaViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContatosNoMapaViewController.xib; sourceTree = "<group>"; };
+		1CB22489170B9C8300551748 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1CB2248A170B9C8300551748 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		1CB2248B170B9C8300551748 /* gps.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gps.png; sourceTree = "<group>"; };
+		1CB2248C170B9C8300551748 /* gps@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gps@2x.png"; sourceTree = "<group>"; };
+		1CB2248D170B9C8300551748 /* lista-contatos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lista-contatos.png"; sourceTree = "<group>"; };
+		1CB2248E170B9C8300551748 /* lista-contatos@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lista-contatos@2x.png"; sourceTree = "<group>"; };
+		1CB2248F170B9C8300551748 /* mapa-contatos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapa-contatos.png"; sourceTree = "<group>"; };
+		1CB22490170B9C8300551748 /* mapa-contatos@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapa-contatos@2x.png"; sourceTree = "<group>"; };
+		1CB22491170B9C8300551748 /* Vila Mariana.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Vila Mariana.gpx"; sourceTree = "<group>"; };
 		1CB85B52170A4E9B009A0627 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		1CD9920C1702556B00FB8AC8 /* ContatoIP67.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContatoIP67.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CD9920F1702556B00FB8AC8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -55,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CB2247A170B99F000551748 /* MapKit.framework in Frameworks */,
+				1CB22478170B900000551748 /* Social.framework in Frameworks */,
 				1CB85B53170A4E9B009A0627 /* MessageUI.framework in Frameworks */,
 				1CD992101702556B00FB8AC8 /* UIKit.framework in Frameworks */,
 				1CD992121702556B00FB8AC8 /* Foundation.framework in Frameworks */,
@@ -65,6 +94,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CB22488170B9C8300551748 /* arquivo_projetos_contatos */ = {
+			isa = PBXGroup;
+			children = (
+				1CB22489170B9C8300551748 /* Default.png */,
+				1CB2248A170B9C8300551748 /* Default@2x.png */,
+				1CB2248B170B9C8300551748 /* gps.png */,
+				1CB2248C170B9C8300551748 /* gps@2x.png */,
+				1CB2248D170B9C8300551748 /* lista-contatos.png */,
+				1CB2248E170B9C8300551748 /* lista-contatos@2x.png */,
+				1CB2248F170B9C8300551748 /* mapa-contatos.png */,
+				1CB22490170B9C8300551748 /* mapa-contatos@2x.png */,
+				1CB22491170B9C8300551748 /* Vila Mariana.gpx */,
+			);
+			name = arquivo_projetos_contatos;
+			path = ../../../Downloads/arquivo_projetos_contatos;
+			sourceTree = "<group>";
+		};
 		1CD992031702556B00FB8AC8 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +131,8 @@
 		1CD9920E1702556B00FB8AC8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1CB22479170B99F000551748 /* MapKit.framework */,
+				1CB22477170B8FFF00551748 /* Social.framework */,
 				1CB85B52170A4E9B009A0627 /* MessageUI.framework */,
 				1CD9920F1702556B00FB8AC8 /* UIKit.framework */,
 				1CD992111702556B00FB8AC8 /* Foundation.framework */,
@@ -96,9 +144,11 @@
 		1CD992151702556B00FB8AC8 /* ContatoIP67 */ = {
 			isa = PBXGroup;
 			children = (
+				1CB22488170B9C8300551748 /* arquivo_projetos_contatos */,
 				1CFE89491703CD0000E1025E /* library */,
-				1CD9921E1702556B00FB8AC8 /* AppDelegate.h */,
+				1CD992161702556B00FB8AC8 /* Supporting Files */,
 				1CD9921F1702556C00FB8AC8 /* AppDelegate.m */,
+				1CD9921E1702556B00FB8AC8 /* AppDelegate.h */,
 				1C1A511C170256F80017982C /* FormularioContatoViewController.xib */,
 				1C1A511A170256F80017982C /* FormularioContatoViewController.h */,
 				1C1A511B170256F80017982C /* FormularioContatoViewController.m */,
@@ -107,7 +157,9 @@
 				1CFE89471703B68E00E1025E /* ListaContatosViewController.m */,
 				1C1A511F170276FA0017982C /* Contato.h */,
 				1C1A5120170276FA0017982C /* Contato.m */,
-				1CD992161702556B00FB8AC8 /* Supporting Files */,
+				1CB22483170B9B0200551748 /* ContatosNoMapaViewController.h */,
+				1CB22484170B9B0200551748 /* ContatosNoMapaViewController.m */,
+				1CB22485170B9B0200551748 /* ContatosNoMapaViewController.xib */,
 			);
 			path = ContatoIP67;
 			sourceTree = "<group>";
@@ -191,6 +243,16 @@
 				1CD992261702556C00FB8AC8 /* Default-568h@2x.png in Resources */,
 				1C1A511E170256F80017982C /* FormularioContatoViewController.xib in Resources */,
 				1CFE894B1703CF9D00E1025E /* README in Resources */,
+				1CB22487170B9B0200551748 /* ContatosNoMapaViewController.xib in Resources */,
+				1CB22492170B9C8300551748 /* Default.png in Resources */,
+				1CB22493170B9C8300551748 /* Default@2x.png in Resources */,
+				1CB22494170B9C8300551748 /* gps.png in Resources */,
+				1CB22495170B9C8300551748 /* gps@2x.png in Resources */,
+				1CB22496170B9C8300551748 /* lista-contatos.png in Resources */,
+				1CB22497170B9C8300551748 /* lista-contatos@2x.png in Resources */,
+				1CB22498170B9C8300551748 /* mapa-contatos.png in Resources */,
+				1CB22499170B9C8300551748 /* mapa-contatos@2x.png in Resources */,
+				1CB2249A170B9C8300551748 /* Vila Mariana.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +268,7 @@
 				1CD992201702556C00FB8AC8 /* AppDelegate.m in Sources */,
 				1C1A511D170256F80017982C /* FormularioContatoViewController.m in Sources */,
 				1C1A5121170276FA0017982C /* Contato.m in Sources */,
+				1CB22486170B9B0200551748 /* ContatosNoMapaViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
