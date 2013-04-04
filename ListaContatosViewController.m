@@ -10,6 +10,7 @@
 #import "FormularioContatoViewController.h"
 #import "Contato.h"
 #import <Social/Social.h>
+#import "ContatoCell.h"
 
 @implementation ListaContatosViewController
 
@@ -39,14 +40,26 @@
     return self;
 }
 
+
 -(void) viewDidLoad{
     
     [super viewDidLoad];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"ContatoCell"
+                                               bundle:[NSBundle mainBundle]]
+                               forCellReuseIdentifier:@"ContatoCell"];
+    
+    
+    self.tableView.rowHeight = 56;
+    //self.tableView.backgroundColor = [UIColor lightGrayColor];
+    
     UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(exibeMaisAcoes:)];
     
     [self.tableView addGestureRecognizer:longPress];
     
 }
+
+
 
 -(void)exibeMaisAcoes:(UIGestureRecognizer *)gesture{
     if(gesture.state == UIGestureRecognizerStateBegan){
@@ -118,7 +131,7 @@
 }
 -(void)enviaTwitter{
     
-    SLComposeViewController *envia=[SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    SLComposeViewController *envia = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
     [envia setInitialText:[NSString stringWithFormat:@"#ip67caelum @dchohfi @%@",contatoSelecionado.twitter]];
     [self presentViewController:envia animated:YES completion:nil];
     
@@ -221,19 +234,26 @@
 
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    static NSString *cellIdentifier = @"Cell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    if(!cell){
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
-                                      reuseIdentifier:cellIdentifier];
-        
-    }
+    
+    
+    static NSString *cellIdentifier = @"ContatoCell";
+    
+    ContatoCell *cell = (ContatoCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+//    
+//    if(!cell){
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+//                                      reuseIdentifier:cellIdentifier];
+//        
+//    }
     Contato *contato = [self.contatos objectAtIndex:indexPath.row];
-    cell.textLabel.text = contato.nome;
+//    cell.textLabel.text = contato.nome;
+
+    [cell setContato:contato];
     
     return cell;
+
 }
 
 -(void)exibeFormulario{

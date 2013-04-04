@@ -10,6 +10,15 @@
 		1C1A511D170256F80017982C /* FormularioContatoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1A511B170256F80017982C /* FormularioContatoViewController.m */; };
 		1C1A511E170256F80017982C /* FormularioContatoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C1A511C170256F80017982C /* FormularioContatoViewController.xib */; };
 		1C1A5121170276FA0017982C /* Contato.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C1A5120170276FA0017982C /* Contato.m */; };
+		1C33A8B4170CECC900601FEF /* user_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C33A8B3170CECC900601FEF /* user_32.png */; };
+		1C33A8B6170CEDC700601FEF /* 1365048454_stock_person.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C33A8B5170CEDC700601FEF /* 1365048454_stock_person.png */; };
+		1C33A8B8170CF7AC00601FEF /* 1365051050_User-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C33A8B7170CF7AC00601FEF /* 1365051050_User-01.png */; };
+		1C33A8BA170CF7B100601FEF /* 1365051034_User.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C33A8B9170CF7B100601FEF /* 1365051034_User.png */; };
+		1C33A8BC170CF7B800601FEF /* 1365051003_16-apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C33A8BB170CF7B800601FEF /* 1365051003_16-apple.png */; };
+		1C33A8BE170CFD3300601FEF /* 1365052396_Apple-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C33A8BD170CFD3300601FEF /* 1365052396_Apple-01.png */; };
+		1C33A8C3170D0CF600601FEF /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C33A8C2170D093100601FEF /* TPKeyboardAvoidingScrollView.m */; };
+		1C73A708170CE12B00C7F9D6 /* ContatoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C73A707170CE12B00C7F9D6 /* ContatoCell.m */; };
+		1C73A70A170CE20700C7F9D6 /* ContatoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C73A709170CE20700C7F9D6 /* ContatoCell.xib */; };
 		1C9C9E1017051A03006BEFCE /* ListaContatosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFE89471703B68E00E1025E /* ListaContatosViewController.m */; };
 		1CB22478170B900000551748 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB22477170B8FFF00551748 /* Social.framework */; };
 		1CB2247A170B99F000551748 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB22479170B99F000551748 /* MapKit.framework */; };
@@ -43,6 +52,17 @@
 		1C1A511C170256F80017982C /* FormularioContatoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FormularioContatoViewController.xib; sourceTree = "<group>"; };
 		1C1A511F170276FA0017982C /* Contato.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contato.h; sourceTree = "<group>"; };
 		1C1A5120170276FA0017982C /* Contato.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contato.m; sourceTree = "<group>"; };
+		1C33A8B3170CECC900601FEF /* user_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = user_32.png; path = ../user_32.png; sourceTree = "<group>"; };
+		1C33A8B5170CEDC700601FEF /* 1365048454_stock_person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1365048454_stock_person.png; path = ../1365048454_stock_person.png; sourceTree = "<group>"; };
+		1C33A8B7170CF7AC00601FEF /* 1365051050_User-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "1365051050_User-01.png"; path = "../1365051050_User-01.png"; sourceTree = "<group>"; };
+		1C33A8B9170CF7B100601FEF /* 1365051034_User.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1365051034_User.png; path = ../1365051034_User.png; sourceTree = "<group>"; };
+		1C33A8BB170CF7B800601FEF /* 1365051003_16-apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "1365051003_16-apple.png"; path = "../1365051003_16-apple.png"; sourceTree = "<group>"; };
+		1C33A8BD170CFD3300601FEF /* 1365052396_Apple-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "1365052396_Apple-01.png"; path = "../1365052396_Apple-01.png"; sourceTree = "<group>"; };
+		1C33A8C1170D093100601FEF /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		1C33A8C2170D093100601FEF /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		1C73A706170CE12B00C7F9D6 /* ContatoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContatoCell.h; sourceTree = "<group>"; };
+		1C73A707170CE12B00C7F9D6 /* ContatoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContatoCell.m; sourceTree = "<group>"; };
+		1C73A709170CE20700C7F9D6 /* ContatoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContatoCell.xib; sourceTree = "<group>"; };
 		1CB22477170B8FFF00551748 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		1CB22479170B99F000551748 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1CB22483170B9B0200551748 /* ContatosNoMapaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContatosNoMapaViewController.h; sourceTree = "<group>"; };
@@ -97,12 +117,18 @@
 		1CB22488170B9C8300551748 /* arquivo_projetos_contatos */ = {
 			isa = PBXGroup;
 			children = (
+				1C33A8BD170CFD3300601FEF /* 1365052396_Apple-01.png */,
+				1C33A8B3170CECC900601FEF /* user_32.png */,
+				1C33A8B5170CEDC700601FEF /* 1365048454_stock_person.png */,
 				1CB22489170B9C8300551748 /* Default.png */,
 				1CB2248A170B9C8300551748 /* Default@2x.png */,
 				1CB2248B170B9C8300551748 /* gps.png */,
 				1CB2248C170B9C8300551748 /* gps@2x.png */,
 				1CB2248D170B9C8300551748 /* lista-contatos.png */,
+				1C33A8BB170CF7B800601FEF /* 1365051003_16-apple.png */,
 				1CB2248E170B9C8300551748 /* lista-contatos@2x.png */,
+				1C33A8B9170CF7B100601FEF /* 1365051034_User.png */,
+				1C33A8B7170CF7AC00601FEF /* 1365051050_User-01.png */,
 				1CB2248F170B9C8300551748 /* mapa-contatos.png */,
 				1CB22490170B9C8300551748 /* mapa-contatos@2x.png */,
 				1CB22491170B9C8300551748 /* Vila Mariana.gpx */,
@@ -152,9 +178,14 @@
 				1C1A511C170256F80017982C /* FormularioContatoViewController.xib */,
 				1C1A511A170256F80017982C /* FormularioContatoViewController.h */,
 				1C1A511B170256F80017982C /* FormularioContatoViewController.m */,
+				1C33A8C1170D093100601FEF /* TPKeyboardAvoidingScrollView.h */,
+				1C33A8C2170D093100601FEF /* TPKeyboardAvoidingScrollView.m */,
 				1CFE89461703B68E00E1025E /* ListaContatosViewController.h */,
 				1CEA0501170675310055FB15 /* ListaContatosProtocol.h */,
 				1CFE89471703B68E00E1025E /* ListaContatosViewController.m */,
+				1C73A706170CE12B00C7F9D6 /* ContatoCell.h */,
+				1C73A709170CE20700C7F9D6 /* ContatoCell.xib */,
+				1C73A707170CE12B00C7F9D6 /* ContatoCell.m */,
 				1C1A511F170276FA0017982C /* Contato.h */,
 				1C1A5120170276FA0017982C /* Contato.m */,
 				1CB22483170B9B0200551748 /* ContatosNoMapaViewController.h */,
@@ -253,6 +284,13 @@
 				1CB22498170B9C8300551748 /* mapa-contatos.png in Resources */,
 				1CB22499170B9C8300551748 /* mapa-contatos@2x.png in Resources */,
 				1CB2249A170B9C8300551748 /* Vila Mariana.gpx in Resources */,
+				1C73A70A170CE20700C7F9D6 /* ContatoCell.xib in Resources */,
+				1C33A8B4170CECC900601FEF /* user_32.png in Resources */,
+				1C33A8B6170CEDC700601FEF /* 1365048454_stock_person.png in Resources */,
+				1C33A8B8170CF7AC00601FEF /* 1365051050_User-01.png in Resources */,
+				1C33A8BA170CF7B100601FEF /* 1365051034_User.png in Resources */,
+				1C33A8BC170CF7B800601FEF /* 1365051003_16-apple.png in Resources */,
+				1C33A8BE170CFD3300601FEF /* 1365052396_Apple-01.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,12 +301,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C33A8C3170D0CF600601FEF /* TPKeyboardAvoidingScrollView.m in Sources */,
 				1C9C9E1017051A03006BEFCE /* ListaContatosViewController.m in Sources */,
 				1CD9921C1702556B00FB8AC8 /* main.m in Sources */,
 				1CD992201702556C00FB8AC8 /* AppDelegate.m in Sources */,
 				1C1A511D170256F80017982C /* FormularioContatoViewController.m in Sources */,
 				1C1A5121170276FA0017982C /* Contato.m in Sources */,
 				1CB22486170B9B0200551748 /* ContatosNoMapaViewController.m in Sources */,
+				1C73A708170CE12B00C7F9D6 /* ContatoCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

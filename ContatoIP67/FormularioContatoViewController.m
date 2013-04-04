@@ -8,6 +8,7 @@
 
 #import "FormularioContatoViewController.h"
 #import "Contato.h"
+#import "TPKeyboardAvoidingScrollView.h"
 
 
 @implementation FormularioContatoViewController
@@ -125,9 +126,49 @@
         }
     }
     
+    
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(tecladoApareceu:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(tecladoSumiu:)
+                                                 name:UIKeyboardDidHideNotification
+                                               object:nil];
+    
 }
+
+
+-(void)viewDidUnload{
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardDidShowNotification
+                                                  object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardDidHideNotification
+                                                  object:nil];
+}
+
+-(void)tecladoApareceu:(NSNotification *)notification{
+    NSLog(@"Teclado apareceu");
+}
+
+-(void)tecladoSumiu:(NSNotification *)notification{
+    NSLog(@"Teclado sumiu");    
+}
+
+-(void) textFieldDidBegingEditing:(UITextField *)textField{
+    self.campoAtual = textField;
+}
+
+-(void) textFieldDidEndEditing:(UITextField *)textField{
+    self.campoAtual = nil;
+}
+
 -(void)escondeFormulario{
     [self dismissViewControllerAnimated:YES completion:nil];
+
 }
 
 -(void)criaContato{

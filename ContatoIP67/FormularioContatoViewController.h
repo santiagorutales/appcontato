@@ -22,6 +22,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *site;
 @property (weak, nonatomic) IBOutlet UITextField *twitter;
 
+@property(weak) UITextField *campoAtual;
+
 
 @property (strong) NSMutableArray *contatos;
 
