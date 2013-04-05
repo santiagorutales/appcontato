@@ -20,6 +20,8 @@
 		1C73A708170CE12B00C7F9D6 /* ContatoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C73A707170CE12B00C7F9D6 /* ContatoCell.m */; };
 		1C73A70A170CE20700C7F9D6 /* ContatoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C73A709170CE20700C7F9D6 /* ContatoCell.xib */; };
 		1C9C9E1017051A03006BEFCE /* ListaContatosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFE89471703B68E00E1025E /* ListaContatosViewController.m */; };
+		1C9FCA45170E3BA00013C27C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9FCA44170E3BA00013C27C /* CoreLocation.framework */; };
+		1C9FCA47170E4FC00013C27C /* 1365139117_Map-Marker-Marker-Inside-Azure.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C9FCA46170E4FC00013C27C /* 1365139117_Map-Marker-Marker-Inside-Azure.png */; };
 		1CB22478170B900000551748 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB22477170B8FFF00551748 /* Social.framework */; };
 		1CB2247A170B99F000551748 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB22479170B99F000551748 /* MapKit.framework */; };
 		1CB22486170B9B0200551748 /* ContatosNoMapaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CB22484170B9B0200551748 /* ContatosNoMapaViewController.m */; };
@@ -63,6 +65,8 @@
 		1C73A706170CE12B00C7F9D6 /* ContatoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContatoCell.h; sourceTree = "<group>"; };
 		1C73A707170CE12B00C7F9D6 /* ContatoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContatoCell.m; sourceTree = "<group>"; };
 		1C73A709170CE20700C7F9D6 /* ContatoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContatoCell.xib; sourceTree = "<group>"; };
+		1C9FCA44170E3BA00013C27C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		1C9FCA46170E4FC00013C27C /* 1365139117_Map-Marker-Marker-Inside-Azure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "1365139117_Map-Marker-Marker-Inside-Azure.png"; sourceTree = "<group>"; };
 		1CB22477170B8FFF00551748 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		1CB22479170B99F000551748 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		1CB22483170B9B0200551748 /* ContatosNoMapaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContatosNoMapaViewController.h; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C9FCA45170E3BA00013C27C /* CoreLocation.framework in Frameworks */,
 				1CB2247A170B99F000551748 /* MapKit.framework in Frameworks */,
 				1CB22478170B900000551748 /* Social.framework in Frameworks */,
 				1CB85B53170A4E9B009A0627 /* MessageUI.framework in Frameworks */,
@@ -117,6 +122,7 @@
 		1CB22488170B9C8300551748 /* arquivo_projetos_contatos */ = {
 			isa = PBXGroup;
 			children = (
+				1C9FCA46170E4FC00013C27C /* 1365139117_Map-Marker-Marker-Inside-Azure.png */,
 				1C33A8BD170CFD3300601FEF /* 1365052396_Apple-01.png */,
 				1C33A8B3170CECC900601FEF /* user_32.png */,
 				1C33A8B5170CEDC700601FEF /* 1365048454_stock_person.png */,
@@ -140,6 +146,7 @@
 		1CD992031702556B00FB8AC8 = {
 			isa = PBXGroup;
 			children = (
+				1C9FCA44170E3BA00013C27C /* CoreLocation.framework */,
 				1CD992151702556B00FB8AC8 /* ContatoIP67 */,
 				1CD9920E1702556B00FB8AC8 /* Frameworks */,
 				1CD9920D1702556B00FB8AC8 /* Products */,
@@ -178,8 +185,6 @@
 				1C1A511C170256F80017982C /* FormularioContatoViewController.xib */,
 				1C1A511A170256F80017982C /* FormularioContatoViewController.h */,
 				1C1A511B170256F80017982C /* FormularioContatoViewController.m */,
-				1C33A8C1170D093100601FEF /* TPKeyboardAvoidingScrollView.h */,
-				1C33A8C2170D093100601FEF /* TPKeyboardAvoidingScrollView.m */,
 				1CFE89461703B68E00E1025E /* ListaContatosViewController.h */,
 				1CEA0501170675310055FB15 /* ListaContatosProtocol.h */,
 				1CFE89471703B68E00E1025E /* ListaContatosViewController.m */,
@@ -191,6 +196,8 @@
 				1CB22483170B9B0200551748 /* ContatosNoMapaViewController.h */,
 				1CB22484170B9B0200551748 /* ContatosNoMapaViewController.m */,
 				1CB22485170B9B0200551748 /* ContatosNoMapaViewController.xib */,
+				1C33A8C1170D093100601FEF /* TPKeyboardAvoidingScrollView.h */,
+				1C33A8C2170D093100601FEF /* TPKeyboardAvoidingScrollView.m */,
 			);
 			path = ContatoIP67;
 			sourceTree = "<group>";
@@ -291,6 +298,7 @@
 				1C33A8BA170CF7B100601FEF /* 1365051034_User.png in Resources */,
 				1C33A8BC170CF7B800601FEF /* 1365051003_16-apple.png in Resources */,
 				1C33A8BE170CFD3300601FEF /* 1365052396_Apple-01.png in Resources */,
+				1C9FCA47170E4FC00013C27C /* 1365139117_Map-Marker-Marker-Inside-Azure.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

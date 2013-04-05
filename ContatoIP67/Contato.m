@@ -18,7 +18,10 @@
     [aCoder encodeObject:_endereco forKey:@"endereco"];
     [aCoder encodeObject:_site forKey:@"site"];
     [aCoder encodeObject:_twitter forKey:@"twitter"];
+    [aCoder encodeObject:_facebook forKey:@"facebook"];
     [aCoder encodeObject:_foto forKey:@"foto"];
+    [aCoder encodeObject:_latitude forKey:@"latitude"];
+    [aCoder encodeObject:_longitude forKey:@"longitude"];
     
 }
 
@@ -32,7 +35,10 @@
         [self setEndereco:[aDecoder decodeObjectForKey:@"endereco"]];
         [self setSite:[aDecoder decodeObjectForKey:@"site"]];
         [self setTwitter:[aDecoder decodeObjectForKey:@"twitter"]];
+        [self setFacebook:[aDecoder decodeObjectForKey:@"facebook"]];
         [self setFoto:[aDecoder decodeObjectForKey:@"foto"]];
+        [self setLatitude:[aDecoder decodeObjectForKey:@"latitude"]];
+        [self setLongitude:[aDecoder decodeObjectForKey:@"longitude"]];
     }
     return self;
 
@@ -44,6 +50,16 @@
 }
 
 
+-(CLLocationCoordinate2D)coordinate{
+    return CLLocationCoordinate2DMake([self.latitude doubleValue], [self.longitude doubleValue]);
+}
+
+-(NSString *)title{
+    return self.nome;
+}
+-(NSString *)subtitle{
+    return self.email;
+}
 
 
 @end

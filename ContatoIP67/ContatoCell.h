@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *email;
 @property (weak, nonatomic) IBOutlet UILabel *twitter;
 
+
 -(void)setContato:(Contato*)contato;
 
 @end

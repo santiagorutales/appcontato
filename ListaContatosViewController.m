@@ -73,7 +73,7 @@
                                                             delegate:self
                                                    cancelButtonTitle:@"Cancelar"
                                               destructiveButtonTitle:nil
-                                                   otherButtonTitles:@"Ligar",@"Enviar Email",@"Visualizar Site",@"Abrir Mapa",@"Twittar", nil];
+                                                   otherButtonTitles:@"Ligar",@"Enviar Email",@"Visualizar Site",@"Abrir Mapa",@"Twittar",@"Post Facebook", nil];
         
         [opcoes showFromTabBar:self.tabBarController.tabBar];
     }
@@ -101,6 +101,10 @@
             
         case 4:
             [self enviaTwitter];
+            break;
+            
+        case 5:
+            [self enviaFacebook];
             break;
             
         default:
@@ -134,10 +138,17 @@
     SLComposeViewController *envia = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
     [envia setInitialText:[NSString stringWithFormat:@"#ip67caelum @dchohfi @%@",contatoSelecionado.twitter]];
     [self presentViewController:envia animated:YES completion:nil];
-    
-
-    
 }
+
+-(void)enviaFacebook{
+    
+    SLComposeViewController *envia = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+
+    [envia setInitialText:[NSString stringWithFormat:@"%@",contatoSelecionado.facebook]];
+    [self presentViewController:envia animated:YES completion:nil];
+}
+
+
 -(void)abrirSite{
     NSString *url = contatoSelecionado.site;
     [self abrirAplicativoComURL:url];

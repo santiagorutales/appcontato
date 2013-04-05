@@ -9,6 +9,8 @@
 #import "FormularioContatoViewController.h"
 #import "Contato.h"
 #import "TPKeyboardAvoidingScrollView.h"
+#import <CoreLocation/CoreLocation.h>
+
 
 
 @implementation FormularioContatoViewController
@@ -111,6 +113,7 @@
 }
 
 
+
 -(void)viewDidLoad{
     
     if(self.contato){
@@ -119,7 +122,23 @@
         self.email.text = self.contato.email;
         self.site.text = self.contato.site;
         self.twitter.text = self.contato.twitter;
+        self.facebook.text = self.contato.facebook;
         self.telefone.text = self.contato.telefone;
+        
+        if(self.contato.latitude){
+            self.latitude.text = [self.contato.latitude stringValue];
+            self.longitude.text = [self.contato.longitude stringValue];
+        
+            [self.mapacontato setCenterCoordinate:CLLocationCoordinate2DMake([self.contato.latitude floatValue], [self.contato.longitude floatValue])
+                                         animated:YES];
+            [self.mapacontato setZoomEnabled:YES];
+            
+                        
+            [self.mapacontato setHidden:NO];
+            [self.loading stopAnimating];
+        }else{
+            [self.mapacontato setHidden:YES];
+         }
         
         if(self.contato.foto){
             [botaoFoto setImage:self.contato.foto forState:UIControlStateNormal];
@@ -222,6 +241,9 @@
     self.contato.endereco = _endereco.text;
     self.contato.site = _site.text;
     self.contato.twitter = _twitter.text;
+    self.contato.facebook = _facebook.text;
+    self.contato.latitude = [NSNumber numberWithFloat:[_latitude.text floatValue]];
+    self.contato.longitude = [NSNumber numberWithFloat:[_longitude.text floatValue]];;
     
     if(botaoFoto.imageView.image){
         self.contato.foto = botaoFoto.imageView.image;
@@ -244,8 +266,43 @@
         [self.site becomeFirstResponder];
     }else if( textField == self.site){
         [self.twitter becomeFirstResponder];
+    }else if( textField == self.twitter){
+        [self.facebook becomeFirstResponder];
     }else {
         //[self novoContato:nil];
+    }
+}
+
+-(IBAction)buscarCoordenadas:(id)sender{
+    
+    if( self.endereco ){
+        [self.loading startAnimating];
+        [self.localizador setHidden:YES];
+        CLGeocoder *geocoder = [[CLGeocoder alloc]init];
+        [geocoder geocodeAddressString:self.endereco.text
+                     completionHandler:^(NSArray *resultados, NSError *error) {
+                         if(error == nil && [resultados count] > 0){
+                             [self.loading stopAnimating];
+                             [self.localizador setHidden:NO];
+                             CLPlacemark *resultado = [resultados objectAtIndex:0];
+                             CLLocationCoordinate2D coordenada = resultado.location.coordinate;
+                         
+                             self.latitude.text = [NSString stringWithFormat:@"%.5f",coordenada.latitude];
+                             self.longitude.text = [NSString stringWithFormat:@"%.5f",coordenada.longitude];
+                             
+                             NSLog(@"%.5f",coordenada.latitude);
+                             NSLog(@"%.5f",coordenada.longitude);
+                             [self.mapacontato setCenterCoordinate:CLLocationCoordinate2DMake([self.contato.latitude floatValue], [self.contato.longitude floatValue])
+                                                          animated:YES];
+                             
+                             //[self.mapacontato addAnnotation:self.contatos];
+
+                             [self.mapacontato setHidden:NO];
+                         }
+                     }];
+    
+    }else{
+        
     }
 }
 
