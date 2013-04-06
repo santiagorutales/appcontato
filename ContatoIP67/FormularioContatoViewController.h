@@ -46,6 +46,6 @@
 
 
 @property (weak, nonatomic) IBOutlet UIButton *botaoFoto;
-
+@property (nonatomic,strong) NSManagedObjectContext *contexto;
 
 @end

@@ -15,8 +15,7 @@
 
 @implementation FormularioContatoViewController
 
-@synthesize botaoFoto;
-
+@synthesize botaoFoto,contexto;
 
 -(id)init{
     
@@ -233,7 +232,8 @@
 -(Contato *)pegaDadosDoFormulario{
     
     if(!self.contato){
-        self.contato = [[Contato alloc]init];
+        self.contato = [NSEntityDescription insertNewObjectForEntityForName:@"Contato"
+                                                     inManagedObjectContext:self.contexto];
     }
     self.contato.nome = _nome.text;
     self.contato.telefone = _telefone.text;

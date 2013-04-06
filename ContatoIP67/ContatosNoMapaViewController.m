@@ -9,6 +9,7 @@
 #import "ContatosNoMapaViewController.h"
 #import <Mapkit/MKUserTrackingBarButtonItem.h>
 #import "Contato.h"
+
 @interface ContatosNoMapaViewController ()
 
 @end

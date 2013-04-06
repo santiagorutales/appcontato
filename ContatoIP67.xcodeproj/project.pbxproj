@@ -45,6 +45,8 @@
 		1CD992221702556C00FB8AC8 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CD992211702556C00FB8AC8 /* Default.png */; };
 		1CD992241702556C00FB8AC8 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CD992231702556C00FB8AC8 /* Default@2x.png */; };
 		1CD992261702556C00FB8AC8 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CD992251702556C00FB8AC8 /* Default-568h@2x.png */; };
+		1CE56FED170F89DC008E6726 /* Modelo_Contatos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1CE56FEB170F89DC008E6726 /* Modelo_Contatos.xcdatamodeld */; };
+		1CE56FEF170F926B008E6726 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CE56FEE170F926B008E6726 /* CoreData.framework */; };
 		1CFE894B1703CF9D00E1025E /* README in Resources */ = {isa = PBXBuildFile; fileRef = 1CFE894A1703CF9D00E1025E /* README */; };
 /* End PBXBuildFile section */
 
@@ -95,6 +97,8 @@
 		1CD992211702556C00FB8AC8 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		1CD992231702556C00FB8AC8 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		1CD992251702556C00FB8AC8 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1CE56FEC170F89DC008E6726 /* Modelo_Contatos.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Modelo_Contatos.xcdatamodel; sourceTree = "<group>"; };
+		1CE56FEE170F926B008E6726 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1CEA0501170675310055FB15 /* ListaContatosProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ListaContatosProtocol.h; path = ../ListaContatosProtocol.h; sourceTree = "<group>"; };
 		1CFE89461703B68E00E1025E /* ListaContatosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListaContatosViewController.h; path = ../ListaContatosViewController.h; sourceTree = "<group>"; };
 		1CFE89471703B68E00E1025E /* ListaContatosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListaContatosViewController.m; path = ../ListaContatosViewController.m; sourceTree = "<group>"; };
@@ -106,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CE56FEF170F926B008E6726 /* CoreData.framework in Frameworks */,
 				1C9FCA45170E3BA00013C27C /* CoreLocation.framework in Frameworks */,
 				1CB2247A170B99F000551748 /* MapKit.framework in Frameworks */,
 				1CB22478170B900000551748 /* Social.framework in Frameworks */,
@@ -146,7 +151,6 @@
 		1CD992031702556B00FB8AC8 = {
 			isa = PBXGroup;
 			children = (
-				1C9FCA44170E3BA00013C27C /* CoreLocation.framework */,
 				1CD992151702556B00FB8AC8 /* ContatoIP67 */,
 				1CD9920E1702556B00FB8AC8 /* Frameworks */,
 				1CD9920D1702556B00FB8AC8 /* Products */,
@@ -164,6 +168,8 @@
 		1CD9920E1702556B00FB8AC8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1CE56FEE170F926B008E6726 /* CoreData.framework */,
+				1C9FCA44170E3BA00013C27C /* CoreLocation.framework */,
 				1CB22479170B99F000551748 /* MapKit.framework */,
 				1CB22477170B8FFF00551748 /* Social.framework */,
 				1CB85B52170A4E9B009A0627 /* MessageUI.framework */,
@@ -180,11 +186,12 @@
 				1CB22488170B9C8300551748 /* arquivo_projetos_contatos */,
 				1CFE89491703CD0000E1025E /* library */,
 				1CD992161702556B00FB8AC8 /* Supporting Files */,
-				1CD9921F1702556C00FB8AC8 /* AppDelegate.m */,
 				1CD9921E1702556B00FB8AC8 /* AppDelegate.h */,
+				1CD9921F1702556C00FB8AC8 /* AppDelegate.m */,
 				1C1A511C170256F80017982C /* FormularioContatoViewController.xib */,
 				1C1A511A170256F80017982C /* FormularioContatoViewController.h */,
 				1C1A511B170256F80017982C /* FormularioContatoViewController.m */,
+				1CE56FEB170F89DC008E6726 /* Modelo_Contatos.xcdatamodeld */,
 				1CFE89461703B68E00E1025E /* ListaContatosViewController.h */,
 				1CEA0501170675310055FB15 /* ListaContatosProtocol.h */,
 				1CFE89471703B68E00E1025E /* ListaContatosViewController.m */,
@@ -317,6 +324,7 @@
 				1C1A5121170276FA0017982C /* Contato.m in Sources */,
 				1CB22486170B9B0200551748 /* ContatosNoMapaViewController.m in Sources */,
 				1C73A708170CE12B00C7F9D6 /* ContatoCell.m in Sources */,
+				1CE56FED170F89DC008E6726 /* Modelo_Contatos.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +442,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1CE56FEB170F89DC008E6726 /* Modelo_Contatos.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1CE56FEC170F89DC008E6726 /* Modelo_Contatos.xcdatamodel */,
+			);
+			currentVersion = 1CE56FEC170F89DC008E6726 /* Modelo_Contatos.xcdatamodel */;
+			path = Modelo_Contatos.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1CD992041702556B00FB8AC8 /* Project object */;
 }

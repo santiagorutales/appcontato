@@ -14,6 +14,9 @@
 
 @implementation ListaContatosViewController
 
+
+@synthesize contexto;
+
 -(id)init{
     self = [super init];
     
@@ -273,7 +276,8 @@
     
     FormularioContatoViewController  *form = [[FormularioContatoViewController alloc]init];
     
-    form.contatos = self.contatos;
+    form.contatos = _contatos;
+    form.contexto = self.contexto;
     form.delegate = self;
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:form];

@@ -20,4 +20,5 @@
 
 -(void) exibeMaisAcoes:(UIGestureRecognizer *) gesture;
 
+@property (nonatomic,strong) NSManagedObjectContext *contexto;
 @end
